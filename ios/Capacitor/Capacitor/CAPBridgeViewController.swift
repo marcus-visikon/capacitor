@@ -111,6 +111,9 @@ import Cordova
         webViewConfiguration.suppressesIncrementalRendering = false
         webViewConfiguration.allowsAirPlayForMediaPlayback = true
         webViewConfiguration.mediaTypesRequiringUserActionForPlayback = []
+        if #available(iOS 15.4, *) {
+            webViewConfiguration.preferences.isElementFullscreenEnabled = true
+        }
         if #available(iOS 14.0, *) {
             webViewConfiguration.limitsNavigationsToAppBoundDomains = instanceConfiguration.limitsNavigationsToAppBoundDomains
         }
